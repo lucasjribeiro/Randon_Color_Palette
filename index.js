@@ -51,9 +51,9 @@ container_palette.addEventListener("click", function(){
 function copyText(event){
     var class_N = event.target.className;
     var index_Palette = class_N.slice(3,5);
-
-    if (index_Palette !== "ta"){
-        index_Palette = parseInt(index_Palette);
+    index_Palette = parseInt(index_Palette);
+    
+    if (!isNaN(index_Palette)){
         let text = alltextColor[index_Palette].innerText;
         let textArea  = document.createElement('textarea');
         textArea.value = text;

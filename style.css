@@ -66,14 +66,14 @@ body{
 .palette:hover{
     transform: scale(1.03);
 }
-.palette:hover span::before{
+.palette:hover::before{
     transform: scale(1.1);
     transform: translateY(20px);
     background-color: rgba(68, 68, 68, 0.6);
     visibility: visible;
 }
 
-span::before{
+.palette::before{
     content: 'Clique para Copiar';
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
@@ -85,4 +85,8 @@ span::before{
     text-align: center;
     transition: all ease-in .2s;
     visibility: hidden;
+}
+
+.palette:active span{
+    transform: scale(1.5);
 }
